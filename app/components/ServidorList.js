@@ -17,17 +17,18 @@ class ServidorList extends Component {
 				dataSource: this.state.dataSource.cloneWithRows([])
 			});
 	    } else {
-             let servidores = [{"cod_pessoa":9659,"num_cpf_pessoa":"86339826172","nom_completo_pessoa":"ISMAEL DE FREITAS PINHO","descr_militar":"3 SGT - ISMAEL DE FREITAS PINHO - SIAPE: 1405707","vlr_identificacao_unica":"1405707","mat_sigrh_servidor":"083070","posto_graducao":"3 SGT"}];
+             /*let servidores = [{"cod_pessoa":9659,"num_cpf_pessoa":"86339826172","nom_completo_pessoa":"ISMAEL DE FREITAS PINHO","descr_militar":"3 SGT - ISMAEL DE FREITAS PINHO - SIAPE: 1405707","vlr_identificacao_unica":"1405707","mat_sigrh_servidor":"083070","posto_graducao":"3 SGT"}];
 				this.setState({
 					dataSource: this.state.dataSource.cloneWithRows(servidores)
 				});
-                /*
-			servidorService.findByVlrIdentificacaoUnica(vlrIdentificacaoUnica).then(servidores => {
+              */
+              servidorService.findByVlrIdentificacaoUnica(vlrIdentificacaoUnica).then(servidores => {
 				this.setState({
 					dataSource: this.state.dataSource.cloneWithRows(servidores)
 				});
-			});
-            */
+			});  
+			
+            
 		}
     }
 
